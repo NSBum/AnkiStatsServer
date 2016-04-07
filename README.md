@@ -8,6 +8,28 @@ As of April 2016, this application simply provides a one-way conduit for getting
 
 You'll need to get some prerequisites out of the way first.
 
+#### Install Flask
+
 ``` bash
 $ pip install flask
+```
+
+#### Install SQLAlchemy
+
+``` bash
+$ sudo pip install sqlalchemy==0.7.9
+```
+
+On AWS Linux, I need `sudo` privileges to install SQLAlchemy.
+
+#### Install Flask/SQLAlchemy
+
+``` bash
+$ sudo pip install flask-sqlalchemy
+```
+
+#### Install SQLAlchemy-Migrate
+
+``` bash
+$ sudo pip install sqlalchemy-migrate
 ```
