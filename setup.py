@@ -1,13 +1,19 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 import os, subprocess, sys
-subprocess.call(['python', 'virtualenv.py', 'flask'])
+#subprocess.call(['python', 'virtualenv.py', 'flask'])
 if sys.platform == 'win32':
     bin = 'Scripts'
 else:
     bin = 'bin'
-subprocess.call([os.path.join('flask', bin, 'pip'), 'install', 'flask'])
-subprocess.call([os.path.join('flask', bin, 'pip'), 'install', 'flask-login'])
-subprocess.call([os.path.join('flask', bin, 'pip'), 'install', 'sqlalchemy==0.7.9'])
-subprocess.call([os.path.join('flask', bin, 'pip'), 'install', 'flask-sqlalchemy'])
-subprocess.call([os.path.join('flask', bin, 'pip'), 'install', 'sqlalchemy-migrate'])
+    try:
+        subprocess.call(['pip', 'install', 'flask'])
+        subprocess.call(['pip', 'install', 'flask-login'])
+        subprocess.call(['pip', 'install', 'sqlalchemy==0.7.9'])
+        subprocess.call(['pip', 'install', 'flask-sqlalchemy'])
+        subprocess.call(['pip', 'install', 'sqlalchemy-migrate'])
+    except OSError as e:
+        print "OS Error {0}: {1}".format(e.errno, e.strerror)
+    except:
+        print "Unexpected error:", sys.exc_info()[0]
+        raise
