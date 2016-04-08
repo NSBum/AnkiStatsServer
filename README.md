@@ -39,4 +39,23 @@ $ pip install flask-sqlalchemy
 ``` bash
 $ pip install sqlalchemy-migrate
 ```
+
+#### Clone the github repo
+
+`cd` to the parent directory of choice and clone.
+
+``` bash
+git clone https://github.com/NSBum/AnkiStatsServer.git
+```
+
+#### Setup a configuration file
+
+You'll need to create a configuration file `config.py` at the root level of your project. Probably I should handle this differently with environment variables or something. But I'm lazy. The configuration should look like:
+
+``` Python
+SQLALCHEMY_DATABASE_URI = 'mysql://user_name:password@127.0.0.1/dbname'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+SECRET_KEY = 'some_top_secret_FBI_bait'
+DEBUG = True
+```
 ```
