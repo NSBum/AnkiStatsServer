@@ -16,20 +16,27 @@ $ pip install flask
 
 #### Install SQLAlchemy
 
+[SQLAlchemy](http://www.sqlalchemy.org) is a Python SQL toolkit and ORM that this application leverages to work closes with Flask.
+
 ``` bash
 $ sudo pip install sqlalchemy==0.7.9
 ```
 
-On AWS Linux, I need `sudo` privileges to install SQLAlchemy.
+On AWS Linux, I needed `sudo` privileges to install SQLAlchemy.
 
 #### Install Flask/SQLAlchemy
 
+[Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/2.1/) is a [Flask](http://flask.pocoo.org/) extension that provides [SQLAlchemy](http://www.sqlalchemy.org/) support for the application.
+
 ``` bash
-$ sudo pip install flask-sqlalchemy
+$ pip install flask-sqlalchemy
 ```
 
 #### Install SQLAlchemy-Migrate
 
+[SQLAlchemy-Migrate](https://sqlalchemy-migrate.readthedocs.org/en/latest/) allows us to deal with changes in the database schema.
+
 ``` bash
-$ sudo pip install sqlalchemy-migrate
+$ pip install sqlalchemy-migrate
+```
 ```
