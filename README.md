@@ -4,6 +4,10 @@ This is a [Flask](http://flask.pocoo.org) application that provides an API for s
 
 As of April 2016, this application simply provides a one-way conduit for getting data into a MySQL database. And it only accepts a certain subset of metrics - those that are provided by the companion project [AnkiStats](). If you have idea that build on this basic project, please dive in.
 
+### Assumptions
+
+You should have a server on which to install this application, some basic knowledge around the terminal, and a working install of MySQL server.
+
 ### Prerequisites
 
 You'll need to get some prerequisites out of the way first.
