@@ -7,9 +7,10 @@ if sys.platform == 'win32':
 else:
     bin = 'bin'
     try:
+        subprocess.call(['pip', 'install', 'mysql-python'])
         subprocess.call(['pip', 'install', 'flask'])
         subprocess.call(['pip', 'install', 'flask-login'])
-        subprocess.call(['pip', 'install', 'sqlalchemy==0.7.9'])
+        subprocess.call(['pip', 'install', 'sqlalchemy'])
         subprocess.call(['pip', 'install', 'flask-sqlalchemy'])
         subprocess.call(['pip', 'install', 'sqlalchemy-migrate'])
     except OSError as e:
