@@ -6,6 +6,11 @@ import json
 
 app = Flask(__name__)
 app.config.from_object('config')
+
+#   see if this keeps db connection alive
+app.config['SQLALCHEMY_POOL_SIZE'] = 100
+app.config['SQLALCHEMY_POOL_RECYCLE'] = 7200
+
 db = SQLAlchemy(app)
 
 from models import *
