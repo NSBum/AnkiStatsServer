@@ -24,6 +24,11 @@ def hello():
 def hello_name(name):
     return "Hello {}!".format(name)
 
+@app.route('/vocab')
+def handle_vocab_req():
+    stat = Stats.query.last()
+    return jsonify(result={"status":200},vocab=stat.vocab)
+
 @app.route('/data', methods=['POST'])
 def handle_save_stats():
     #   get JSON data
