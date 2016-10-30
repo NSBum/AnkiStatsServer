@@ -5,7 +5,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 import os
 import json
 
-USE_PRODUCTION_SERVER = 1
+USE_PRODUCTION_SERVER = 0
 
 app = Flask(__name__)
 app.config.from_object('config')
