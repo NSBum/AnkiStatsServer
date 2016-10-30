@@ -16,7 +16,7 @@ class Stats(db.Model):
     tcount = db.Column(db.Integer)
     # review : number reviewed
     review = db.Column(db.Integer)
-    # due : number that were due today
+    # due : number that were due
     due = db.Column(db.Integer)
     # filt : number of filtered cards reviewed
     filt = db.Column(db.Integer)
