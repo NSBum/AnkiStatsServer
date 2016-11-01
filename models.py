@@ -34,6 +34,8 @@ class Stats(db.Model):
     total = db.Column(db.Integer)
     # tomorrow : cards due tomorrow
     tomorrow = db.Column(db.Integer)
+    # tretent : true retention rate
+    tretent = db.Column(db.Float)
 
 
     def __init__(self,data):
@@ -52,3 +54,4 @@ class Stats(db.Model):
         self.duration = data['duration']
         self.total = data['total']
         self.tomorrow = data['tomorrow']
+        self.tretent = data['trueRetention']
