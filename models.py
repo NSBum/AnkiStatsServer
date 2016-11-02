@@ -36,6 +36,12 @@ class Stats(db.Model):
     tomorrow = db.Column(db.Integer)
     # tretent : true retention rate
     tretent = db.Column(db.Float)
+    # ez_avg : average ease
+    ez_avg = db.Column(db.Float)
+    # ez_low : lowest ease
+    ez_low = db.Column(db.Float)
+    # ez_high : highest ease
+    ez_high = db.Column(db.Float)
 
 
     def __init__(self,data):
@@ -55,3 +61,6 @@ class Stats(db.Model):
         self.total = data['total']
         self.tomorrow = data['tomorrow']
         self.tretent = data['trueRetention']
+        self.ez_avg = data['avgEase']
+        self.ez_low = data['lowEase']
+        self.ez_high = data['highEase']
