@@ -42,7 +42,14 @@ class Stats(db.Model):
     ez_low = db.Column(db.Float)
     # ez_high : highest ease
     ez_high = db.Column(db.Float)
-
+    # mtr : mature vocab card count
+    mtr = db.Column(db.Integer)
+    # yng: young/learn vocab card count
+    yng = db.Column(db.Integer)
+    # new: new vocab card count
+    new = db.Column(db.Integer)
+    # susp: suspended vocab card count
+    susp = db.Column(db.Integer)
 
     def __init__(self,data):
         self.timestamp = data['time']
@@ -64,3 +71,7 @@ class Stats(db.Model):
         self.ez_avg = data['avgEase']
         self.ez_low = data['lowEase']
         self.ez_high = data['highEase']
+        self.mtr = data['mtr']
+        self.yng = data['yng']
+        self.new = data['new']
+        self.susp = data['susp']
