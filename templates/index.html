@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% set active_page = "index" %}
+{% set content_title = "Dashboard" %}
+
+{% block jumbotron %}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h1>My Russian Learning Stats</h1>
+    <p>I use Anki to learn Russian vocabulary, solidify grammar, and improve my reading. Statistics help keep me motivated.</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row placeholders">
+  <div class="col-xs-6 col-sm-3 placeholder">
+      <figure>
+          <embed type="image/svg+xml" src="/graph/" />
+      </figure>
+    <!-- <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail"> -->
+    <a href="/vocabnotes"><h4>Vocabulary</h4></a>
+    <span class="text-muted">Vocabulary notes</span>
+  </div>
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+    <h4>Label</h4>
+    <span class="text-muted">Something else</span>
+  </div>
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+    <h4>Label</h4>
+    <span class="text-muted">Something else</span>
+  </div>
+  <div class="col-xs-6 col-sm-3 placeholder">
+    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
+    <h4>Label</h4>
+    <span class="text-muted">Something else</span>
+  </div>
+</div>
+{% endblock %}
