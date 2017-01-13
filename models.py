@@ -12,7 +12,7 @@ class Stats(db.Model):
     timestamp = db.Column(db.Integer)
     # vocab : number of vocabulary notes
     vocab = db.Column(db.Integer)
-    # tcount : total card cound in the collection
+    # tcount : total card count in the collection
     tcount = db.Column(db.Integer)
     # review : number reviewed
     review = db.Column(db.Integer)
@@ -50,6 +50,12 @@ class Stats(db.Model):
     new = db.Column(db.Integer)
     # susp: suspended vocab card count
     susp = db.Column(db.Integer)
+    # good_lrn: fraction of learning cards marked good
+    good_lrn = db.Column(db.Float)
+    # good_yng: fraction of young cards marked good
+    good_yng = db.Column(db.Float)
+    # good_mature: fraction of mature cards marked good
+    good_mature = db.Column(db.Float)
 
     def __init__(self,data):
         self.timestamp = data['time']
@@ -75,3 +81,6 @@ class Stats(db.Model):
         self.yng = data['yng']
         self.new = data['new']
         self.susp = data['susp']
+        self.good_lrn = data['good_lrn']
+        self.good_yng = data['good_yng']
+        self.good_mature = data['good_mature']
