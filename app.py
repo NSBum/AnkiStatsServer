@@ -9,8 +9,6 @@ import pygal
 from pygal.style import DarkSolarizedStyle
 from datetime import date, datetime, timedelta
 
-USE_PRODUCTION_SERVER = 0
-
 app = Flask(__name__)
 app.config.from_object('config')
 
@@ -104,7 +102,7 @@ def handle_save_stats():
     return jsonify(result={"status": 200},id = stat.s_id)
 
 if __name__ == '__main__':
-    if USE_PRODUCTION_SERVER == 1:
+    if app.config['USE_PRODUCTION_SERVER'] == 1:
         from tornado.wsgi import WSGIContainer
         from tornado.httpserver import HTTPServer
         from tornado.ioloop import IOLoop
