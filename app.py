@@ -87,7 +87,7 @@ def hello_name(name):
 @app.route('/vocab')
 def handle_vocab_req():
     stat = Stats.query.order_by(Stats.timestamp.desc()).first()
-    return jsonify(result={"status":200},vocab=stat.vocab)
+    return jsonify(result={"status":200},vocab=stat.vocab, progress=stat.vocab-1735)
 
 @app.route('/data', methods=['POST'])
 def handle_save_stats():
